@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Honda Car Showcase</title>
+  <style>
+    :root {
+      --primary: #141414;
+      --accent: #e60012;
+      --bg: #f2f2f2;
+      --text: #333;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky; top:0;
+      background: var(--primary);
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index:100;
+    }
+    nav a {
+      color:white;
+      margin-left:1em;
+      text-decoration:none;
+      font-weight:500;
+    }
+    nav a:hover { text-decoration:underline; }
+   .banner {
+  background: url("https://i.etsystatic.com/40078250/r/il/07dbcb/5473950932/il_fullxfull.5473950932_544q.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+  position: relative;
+}
+
+    .banner h1 {
+      font-size:2.5rem;
+      background:rgba(0,0,0,0.5);
+      padding:1rem 2rem;
+      border-radius:8px;
+    }
+    section { padding:3rem 2rem; text-align:center; }
+    .models-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:2rem;
+      margin-top:2rem;
+    }
+    .card {
+      background:white;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      text-align:left;
+    }
+    .card img { width:100%; height:auto; display:block; }
+    .card-content { padding:1rem; }
+    .card-content h3 {
+      color: var(--accent);
+      margin-bottom:0.5rem;
+    }
+    .details-list {
+      list-style:-disc inside;
+      max-width:600px;
+      margin:1rem auto;
+      text-align:left;
+    }
+    footer {
+      background: var(--primary);
+      color:white;
+      padding:2rem;
+    }
+    .socials a {
+      color:white;
+      margin:0 1rem;
+      text-decoration:none;
+    }
+    .socials a:hover { text-decoration:underline; }
+    @media(max-width:768px) {
+      header, nav { flex-direction:column; align-items:flex-start; }
+      nav { margin-top:0.5rem; }
+    }
+    #purchase-info {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.purchase-block {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.purchase-block h3 {
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Honda Motors</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#models">Models</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#payment">Payment</a>
+      <a href="#follow">Follow</a>
+    </nav>
+  </header>
+<section class="banner" id="home">
+  <div style="text-align: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Honda_logo.svg" style="width: 120px; margin-bottom: 1rem;">
+  </div>
+</section>
+
+  <section id="models">
+    <h2>Explore Our Models</h2>
+    <div class="models-grid">
+      <!-- Civic -->
+      <div class="card">
+        <img src="https://di-sitebuilder-assets.s3.amazonaws.com/Honda/interiorTemplates/model_showroom/civic_si_coupe.png" alt="Honda Civic">
+        <div class="card-content">
+          <h3>Honda Civic</h3>
+          <p>Compact sedan with sporty design and efficient performance.</p>
+          <ul class="details-list">
+            <li>1.5L Turbocharged engine</li>
+            <li>Up to 42 mpg highway</li>
+            <li>Honda Sensing™ safety suite</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Accord -->
+      <div class="card">
+        <img src="https://images.dealer.com/ddc/vehicles/2025/Honda/Accord/Sedan/color/Crystal%20Black%20Pearl-BK-29,29,29-640-en_US.jpg" alt="Honda Accord">
+        <div class="card-content">
+          <h3>Honda Accord</h3>
+          <p>Mid-size sedan designed for comfort and performance.</p>
+          <ul class="details-list">
+            <li>2.0L Hybrid or 1.5L Turbo</li>
+            <li>Wireless Apple CarPlay/Android Auto</li>
+            <li>Blind Spot Information System</li>
+          </ul>
+        </div>
+      </div>
+      <!-- CR‑V -->
+      <div class="card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.DVgTqr9-4q8Uhx0azkxYrgHaEu?r=0&rs=1&pid=ImgDetMain&cb=idpwebp1&o=7&rm=3" alt="Honda CR-V">
+        <div class="card-content">
+          <h3>Honda CR‑V</h3>
+          <p>Spacious SUV with hybrid efficiency and versatile cargo space.</p>
+          <ul class="details-list">
+            <li>Hybrid and gas models</li>
+            <li>Hands-free tailgate</li>
+            <li>Real Time AWD available</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Pilot -->
+      <div class="card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.VwwgMNNZfL6YJaQOZl12rAHaDy?r=0&rs=1&pid=ImgDetMain&cb=idpwebp1&o=7&rm=3" alt="Honda Pilot">
+        <div class="card-content">
+          <h3>Honda Pilot</h3>
+          <p>Three-row SUV built for family adventures.</p>
+          <ul class="details-list">
+            <li>Up to 8 passengers</li>
+            <li>Intelligent Traction Management</li>
+            <li>Rear entertainment system</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Odyssey -->
+      <div class="card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.FvCxtmyBvlONLikLsGDHpwHaDt?r=0&w=800&h=400&rs=1&pid=ImgDetMain&cb=idpwebp1&o=7&rm=3" alt="Honda Odyssey">
+        <div class="card-content">
+          <h3>Honda Odyssey</h3>
+          <p>Family minivan loaded with comfort and cargo innovation.</p>
+          <ul class="details-list">
+            <li>CabinWatch™ & CabinTalk™</li>
+            <li>Up to 32 cu.ft. cargo space</li>
+            <li>Tri‑zone climate control</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section id="delivery">
+    <h2>Delivery Options</h2>
+    <ul class="details-list">
+      <li><strong>Showroom Pickup:</strong> Collect your vehicle at your nearest Honda dealer.</li>
+      <li><strong>Home Delivery:</strong> Delivered to your doorstep with full inspection and prep.</li>
+      <li><strong>Nationwide Transport:</strong> We coordinate logistics for inter-state delivery.</li>
+      <li><strong>Scheduled Test Drive:</strong> Convenient home test drive at your convenience.</li>
+    </ul>
+  </section>
+
+  <section id="payment">
+    <h2>Payment & Financing</h2>
+    <ul class="details-list">
+      <li><strong>Straight Purchase:</strong> Bank transfer, UPI, credit/debit cards.</li>
+      <li><strong>EMI Plans:</strong> Available up to 60 months at 0–1.5% interest (subject to bank approval).</li>
+      <li><strong>Lease Options:</strong> Flexible lease for personal and business needs.</li>
+      <li><strong>Trade-in Support:</strong> Valuation and purchase of your old vehicle.</li>
+    </ul>
+  </section>
+<footer>
+  <section id="follow">
+    <h2>Follow Us</h2>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+  </section>
+  
+    <p><center>© 2025 Honda Motors. All rights reserved.</center></p>
+</footer>
+
+</body>
+</html>
